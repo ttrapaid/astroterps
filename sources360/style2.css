@@ -10,7 +10,7 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
     padding: 0;
 }
 header {
-    background-color:rgba(33, 33, 33, 0.9);
+    background-color:rgba(33, 33, 33, 1);
     color:#ffffff;
     display:block;
     font: 14px/1.3 Arial,sans-serif;
