@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Welcome to the AstroTerps!</title>
+        <style>
+            .nothing {
+                background-color: #000;
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                
+            }
+            canvas {
+                position: absolute;
+                top:0;
+                left:0;
+                z-index: 0;
+            }
+
+            .parallax {
+                background-position: center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .container {
+                position: relative;
+                z-index: 1;
+                height: 70px;
+                
+            }
+
+            .nav-scroller {
+            overflow: hidden;
+            /*background-color: #333;*/
+            position: fixed; /* Set the navbar to fixed position */
+            top: 0; /* Position the navbar at the top of the page */
+            width: 100%; /* Full width */
+            }
+        </style>
+
+              
+    </head>
+
+    <!-- draws the background -->
+    <canvas id ="bgCanvas"></canvas>
+
+    <!--
+    Copyright (c) 2018 by Loktar (https://codepen.io/loktar00/pen/uEJKl)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    -->
+    <script src ="starScript.js"></script> 
+
+
+
+
+    
+    <body style="background-color:rgb(10, 10, 5);">
+       
+        <header class="container rounded">  
+            <div style ="margin-left:-50px;" class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex justify-content-between">
+                    <a class="p-2 text-muted" href="#home" onclick="smoothScroll('home');return false;">Home</a>
+                    <a class="p-2 text-muted" href="#about" onclick="smoothScroll('about');return false;">About</a>
+                    <a class="p-2 text-muted" href="#">Events</a>
+                    <a class="p-2 text-muted" href="#">Gallery</a>
+                    <a class="p-2 text-muted" href="#">Links</a>
+                    <a class="p-2 text-muted" href="#">Contact</a>
+                    <a class="p-2 text-muted" href="#">Calendar</a>
+                    <a class="p-2 text-muted" href="#">Outreach</a>
+                    <a class="p-2 text-muted" href="#">Code</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="text-light container rounded">
+            <div id="home">
+                <h1 clss="text-center" style="margin-top:10px; font-size: 500%;">
+                    AstroTerps
+                </h1>
+                <h3 clss="text-center" style="font-size:300%; margin-top:5px;">
+                    Terrapin Astronomical Society
+                </h3>
+            </div>
+            
+            <div style="margin-top:1000px; margin-bottom:4000px;" lass = "rounded" id="about">
+                <h5>About the Club</h5>
+                <h6>Info about the club and the our events will be posted on this website here, as well as on our Facebook group page.
+
+                    The AstroTerps usually meet in the Computer and Space Sciences Building room CSS1255, which is the Astronomy Library. Scroll down for directions on how to get there. If the library is unavailable we will meet in CSS1106 (the "Undergraduate Interaction Room"). Check the homepage for meeting dates, times and locations. Anyone is free to join -- we are open to all majors!
+                    
+                    This year we will coordinate all kinds of events, from impromtu telescope observing on the mall to light pollution activism to visits to the University of Maryland Campus Observatory. We have lots to do and are open to suggestions for other activities as well.
+                    
+                    Also check out the AstroTerps calendar with club events, UMD events, and Astronomy related events in the area.
+                    
+                    Directions to Our Meeting Rooms
+                    There is often confusion between the two wings of the Computers and Space Sciences building (Building #224) that prevents people from finding us. If you're unfamiliar with this building, you might want to take a look at TerpNav.
+                    
+                    Both CSS1255 (our normal meeting room) and CSS1106 (our backup) are located on the eastern (right-side) half of the building -- not the one with the green glass and the doors to OIT -- the one with the chairs and umbrellas in front. Enter through the double doors and take your first right. CSS1106 is on your left, with a sign reading "Undergraduate Interaction Room." If you take your first left from that hall, and walk halfway down you'll find CSS1255, the Library, on your left.
+                </h6>
+            </div>
+
+        </div>
+       
+       
+
+
+
+
+        <script>
+            function currentYPosition() {
+                // Firefox, Chrome, Opera, Safari
+                if (self.pageYOffset) return self.pageYOffset;
+                // Internet Explorer 6 - standards mode
+                if (document.documentElement && document.documentElement.scrollTop)
+                    return document.documentElement.scrollTop;
+                // Internet Explorer 6, 7 and 8
+                if (document.body.scrollTop) return document.body.scrollTop;
+                return 0;
+            }
+
+            function elmYPosition(eID) {
+                var elm = document.getElementById(eID);
+                var y = elm.offsetTop;
+                var node = elm;
+                while (node.offsetParent && node.offsetParent != document.body) {
+                    node = node.offsetParent;
+                    y += node.offsetTop;
+                } return y;
+            }
+
+            function smoothScroll(eID) {
+                var startY = currentYPosition();
+                var stopY = elmYPosition(eID) - 50;
+                var distance = stopY > startY ? stopY - startY : startY - stopY;
+                if (distance < 100) {
+                    scrollTo(0, stopY); return;
+                }
+                var speed = Math.round(distance / 40);
+                if (speed >= 20) speed = 20;
+                var step = Math.round(distance / 25);
+                var leapY = stopY > startY ? startY + step : startY - step;
+                var timer = 0;
+                if (stopY > startY) {
+                    for ( var i=startY; i<stopY; i+=step ) {
+                        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                        leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+                    } return;
+                }
+                for ( var i=startY; i>stopY; i-=step ) {
+                    setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                    leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+                }
+            }
+        </script>
+        
+    
+        <!-- javascript imports: jQuery, Popper.js, then Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+
+</html>
+
