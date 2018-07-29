@@ -38,12 +38,14 @@
             }
 
             .nav-scroller {
-            overflow: hidden;
-            /*background-color: #333;*/
-            position: fixed; /* Set the navbar to fixed position */
-            top: 0; /* Position the navbar at the top of the page */
-            width: 100%; /* Full width */
+                align-content: center;
+                overflow: hidden;
+                /*background-color: #333;*/
+                position: fixed; /* Set the navbar to fixed position */
+                top: 0; /* Position the navbar at the top of the page */
+                width: 100%; /* Full width */
             }
+
         </style>
 
               
@@ -70,17 +72,17 @@
     <body style="background-color:rgb(10, 10, 5);">
        
         <header class="container rounded">  
-            <div style ="margin-left:-50px;" class="nav-scroller py-1 mb-2">
-                <nav class="nav d-flex justify-content-between">
-                    <a class="p-2 text-muted" href="#home" onclick="smoothScroll('home');return false;">Home</a>
-                    <a class="p-2 text-muted" href="#about" onclick="smoothScroll('about');return false;">About</a>
-                    <a class="p-2 text-muted" href="#">Events</a>
-                    <a class="p-2 text-muted" href="#">Gallery</a>
-                    <a class="p-2 text-muted" href="#">Links</a>
-                    <a class="p-2 text-muted" href="#">Contact</a>
-                    <a class="p-2 text-muted" href="#">Calendar</a>
-                    <a class="p-2 text-muted" href="#">Outreach</a>
-                    <a class="p-2 text-muted" href="#">Code</a>
+            <div class="nav-scroller py-1 mb-2">
+                <nav class="nav d-flex">
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#home" onclick="smoothScroll('home');return false;">Home</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#about" onclick="smoothScroll('about');return false;">About</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Events</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Gallery</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Links</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Contact</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Calendar</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Outreach</a>
+                    <a style="color: red; padding-right: 30px;" class="p-2" href="#">Code</a>
                 </nav>
             </div>
         </header>
