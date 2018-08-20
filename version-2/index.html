@@ -46,6 +46,15 @@
                 width: 100%; /* Full width */
             }
 
+            #footer {
+                position:fixed;
+                left:0px;
+                bottom:0px;
+                height:40px;
+                width:100%;
+                background: black;
+            }
+
         </style>
 
               
@@ -72,10 +81,9 @@
                 <nav style = "z-index: 1000; position: fixed; width: 50%; margin-left:25%; background-color:rgb(10, 10, 5); justify-content:space-between;" class="nav">
                     <a style="color: red;" class="p-2" href="#home" onclick="smoothScroll('home');return false;">Home</a>
                     <a style="color: red;" class="p-2" href="#about" onclick="smoothScroll('about');return false;">About</a>
-                    <a style="color: red;" class="p-2" href="#events">Events</a>
-                    <a style="color: red;" class="p-2" href="#gallery">Gallery</a>
+                    <a style="color: red;" class="p-2" href="#events" onclick="smoothScroll('events');return false;">Events</a>
+                    <a style="color: red;" class="p-2" href="#gallery" onclick="smoothScroll('gallery');return false;">Gallery</a>
                     <a style="color: red;" class="p-2" href="#links">Links</a>
-                    <a style="color: red;" class="p-2" href="#contact">Contact</a>
                     <a style="color: red;" class="p-2" href="#calendar">Calendar</a>
                     <a style="color: red;" class="p-2" href="#outreach">Outreach</a>
                     <a style="color: red;" class="p-2" href="#code">Code</a>
@@ -83,8 +91,8 @@
             </div>
         </header>
 
-        <div style="padding-top: 20%;" class="text-light container rounded">
-            <div id="home">
+        <div style="padding-left:5%; padding-right:5%; padding-top: 20%;" class="text-light rounded" id="home">
+            <div class = "container">
                 <h1 class="text-center" style="margin-top:10px; font-size: 500%;">
                     AstroTerps
                 </h1>
@@ -93,26 +101,54 @@
                 </h3>
             </div>
             
-            <div style="padding-top: 40%; padding-bottom: 40%;" class = "rounded" id="about">
-                <h5 clss="text-center">About the Club</h5>
-                <h6 clss="text-center">Info about the club and the our events will be posted on this website here, as well as on our Facebook group page.
+            <div style="padding-top: 40%; padding-bottom: 40%;">
+                <div style="padding-bottom:20%; padding-top: 20%; background-color:rgb(75, 7, 7);" id="about">
+                    <div style = "padding-left:10%; padding-right:10%;" class= "rounded">
+                        <h4>About the Club</h5>
+                        <h6>Info about the club and the our events will be posted on this website here, as well as on our Facebook group page.
 
-                    The AstroTerps usually meet in the Computer and Space Sciences Building room CSS1255, which is the Astronomy Library. Scroll down for directions on how to get there. If the library is unavailable we will meet in CSS1106 (the "Undergraduate Interaction Room"). Check the homepage for meeting dates, times and locations. Anyone is free to join -- we are open to all majors!
-                    
-                    This year we will coordinate all kinds of events, from impromtu telescope observing on the mall to light pollution activism to visits to the University of Maryland Campus Observatory. We have lots to do and are open to suggestions for other activities as well.
-                    
-                    Also check out the AstroTerps calendar with club events, UMD events, and Astronomy related events in the area.
-                    
-                    Directions to Our Meeting Rooms
-                    There is often confusion between the two wings of the Computers and Space Sciences building (Building #224) that prevents people from finding us. If you're unfamiliar with this building, you might want to take a look at TerpNav.
-                    
-                    Both CSS1255 (our normal meeting room) and CSS1106 (our backup) are located on the eastern (right-side) half of the building -- not the one with the green glass and the doors to OIT -- the one with the chairs and umbrellas in front. Enter through the double doors and take your first right. CSS1106 is on your left, with a sign reading "Undergraduate Interaction Room." If you take your first left from that hall, and walk halfway down you'll find CSS1255, the Library, on your left.
-                </h6>
+                            The AstroTerps usually meet in the Computer and Space Sciences Building room CSS1255, which is the Astronomy Library. Scroll down for directions on how to get there. If the library is unavailable we will meet in CSS1106 (the "Undergraduate Interaction Room"). Check the homepage for meeting dates, times and locations. Anyone is free to join -- we are open to all majors!
+                            
+                            This year we will coordinate all kinds of events, from impromtu telescope observing on the mall to light pollution activism to visits to the University of Maryland Campus Observatory. We have lots to do and are open to suggestions for other activities as well.
+                            
+                            Also check out the AstroTerps calendar with club events, UMD events, and Astronomy related events in the area.
+                            
+                            Directions to Our Meeting Rooms
+                            There is often confusion between the two wings of the Computers and Space Sciences building (Building #224) that prevents people from finding us. If you're unfamiliar with this building, you might want to take a look at TerpNav.
+                            
+                            Both CSS1255 (our normal meeting room) and CSS1106 (our backup) are located on the eastern (right-side) half of the building -- not the one with the green glass and the doors to OIT -- the one with the chairs and umbrellas in front. Enter through the double doors and take your first right. CSS1106 is on your left, with a sign reading "Undergraduate Interaction Room." If you take your first left from that hall, and walk halfway down you'll find CSS1255, the Library, on your left.
+                        </h6>
+                    </div>
+                </div>
+
+
+                <div style = "padding-bottom:40%; background-color:rgb(110, 10, 10);" id = "gallery">
+                        <div style = "padding-left:10%; padding-right:10%;">
+                                <h4 style = "padding-top: 10%;">Gallery</h5>
+                                <h6>(each album could have a preview picture in this div, clicking will link to the album of pictures)</h6>
+                        </div>
+                </div>
+
+                <div style = "background-color:goldenrod;" id = "events">
+                        testing
+                </div>
             </div>
-
         </div>
        
        
+        <footer>
+            <div id = "footer" class="text-center">
+                <h5 style = "padding-top:9px; font-size:100%; color:lightsteelblue;">
+                    <a style = "color:lightsteelblue" 
+                    href="https://maps.umd.edu/map/index.html?&zoom=19&feature=building&name=224&basemap=detailed&hideiframe=true" target = "_blank">
+                        CSS1255</a> 
+                    | 
+                    <a style = " color:lightsteelblue;" href="">Contact Us</a>
+                    | 
+                    <a style = " color:lightsteelblue;" href="#home" onclick="smoothScroll('home');return false;">Back to Top</a>
+                </h5>
+            </div>
+        </footer>
 
 
 
