@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Welcome to the AstroTerps!</title>
+        <style>
+            canvas {
+                position: absolute;
+                top:0;
+                left:0;
+                z-index: 0;
+            }
+            .container {
+                position: relative;
+                z-index: 1;
+                height: 70px;
+                
+            }
+            #footer {
+                position:fixed;
+                left:0px;
+                bottom:0px;
+                height:40px;
+                width:100%;
+                background: black;
+            }
+        </style> 
+    </head>
+
+    <canvas id ="bgCanvas"></canvas>
+
+    <!--
+    Copyright (c) 2018 by Loktar (https://codepen.io/loktar00/pen/uEJKl)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    -->
+    <script src ="starScript.js"></script> 
+
+    <body style="background-color:rgb(10, 10, 5);">
+        
+        <header>  
+            <div>
+                <nav style = "z-index: 1000; position: fixed; width: 50%; margin-left:25%; background-color:rgb(10, 10, 5); justify-content:space-between;" class="nav">
+                    <a style="color: red;" class="p-2" href="index.html">Home</a>
+                    <a style="color: red;" class="p-2" href="index.html">About</a>
+                    <a style="color: red;" class="p-2" href="index.html">Events</a>
+                    <a style="color: red;" class="p-2" href="index.html">Gallery</a>
+                    <a style="color: red;" class="p-2" href="links.html">Links</a>
+                    <a style="color: red;" class="p-2" href="calendar.html">Calendar</a>
+                    <a style="color: red;" class="p-2" href="outreach.html">Outreach</a>
+                    <a style="color: red;" class="p-2" href="code.html">Code</a>
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>
