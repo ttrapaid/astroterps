@@ -75,6 +75,9 @@
     -->
     <script src ="starScript.js"></script> 
 
+    <script src ="scrollTo.js"></script>
+
+    
     <body style="background-color:rgb(10, 10, 5);">
        
         <header>  
@@ -86,7 +89,7 @@
                     <a style="color: lightsteelblue;" class="p-2" href="#gallery" onclick="smoothScroll('gallery');return false;">Gallery</a>
                     <a style="color: lightsteelblue;" class="p-2" href="links.html">Links</a>
                     <a style="color: lightsteelblue;" class="p-2" href="#calendar">Calendar</a>
-                    <a style="color: lightsteelblue;" class="p-2" href="#outreach">Outreach</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="outreach.html">Outreach</a>
                     <a style="color: lightsteelblue;" class="p-2" href="#code">Code</a>
                 </nav>
             </div>
@@ -144,63 +147,12 @@
                     href="https://maps.umd.edu/map/index.html?&zoom=19&feature=building&name=224&basemap=detailed&hideiframe=true" target = "_blank">
                         CSS1255</a> 
                     | 
-                    <a style = " color:lightsteelblue;" href="">Contact Us</a>
+                    <a style = " color:lightsteelblue;" href="mailto:astroterps@gmail.com">Contact Us</a>
                     | 
                     <a style = " color:lightsteelblue;" href="#home" onclick="smoothScroll('home');return false;">Back to Top</a>
                 </h5>
             </div>
-        </footer>
-
-
-
-        <!--Scroll to javascript-->
-        <script>
-            function currentYPosition() {
-                // Firefox, Chrome, Opera, Safari
-                if (self.pageYOffset) return self.pageYOffset;
-                // Internet Explorer 6 - standards mode
-                if (document.documentElement && document.documentElement.scrollTop)
-                    return document.documentElement.scrollTop;
-                // Internet Explorer 6, 7 and 8
-                if (document.body.scrollTop) return document.body.scrollTop;
-                return 0;
-            }
-
-            function elmYPosition(eID) {
-                var elm = document.getElementById(eID);
-                var y = elm.offsetTop;
-                var node = elm;
-                while (node.offsetParent && node.offsetParent != document.body) {
-                    node = node.offsetParent;
-                    y += node.offsetTop;
-                } return y;
-            }
-
-            function smoothScroll(eID) {
-                var startY = currentYPosition();
-                var stopY = elmYPosition(eID) - 50;
-                var distance = stopY > startY ? stopY - startY : startY - stopY;
-                if (distance < 100) {
-                    scrollTo(0, stopY); return;
-                }
-                var speed = Math.round(distance / 40);
-                if (speed >= 20) speed = 20;
-                var step = Math.round(distance / 25);
-                var leapY = stopY > startY ? startY + step : startY - step;
-                var timer = 0;
-                if (stopY > startY) {
-                    for ( var i=startY; i<stopY; i+=step ) {
-                        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-                        leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-                    } return;
-                }
-                for ( var i=startY; i>stopY; i-=step ) {
-                    setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-                    leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-                }
-            }
-        </script>
-        
+        </footer>      
     
         <!-- javascript imports: jQuery, Popper.js, then Bootstrap JS-->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
