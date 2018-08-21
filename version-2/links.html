@@ -14,8 +14,7 @@
             .container {
                 position: relative;
                 z-index: 1;
-                height: 70px;
-                
+                height: 70px;  
             }
             #footer {
                 position:fixed;
@@ -24,6 +23,7 @@
                 height:40px;
                 width:100%;
                 background: black;
+                z-index: 1000;
             }
         </style> 
     </head>
@@ -42,20 +42,68 @@
     <script src ="starScript.js"></script> 
 
     <body style="background-color:rgb(10, 10, 5);">
-        
         <header>  
             <div>
                 <nav style = "z-index: 1000; position: fixed; width: 50%; margin-left:25%; background-color:rgb(10, 10, 5); justify-content:space-between;" class="nav">
-                    <a style="color: red;" class="p-2" href="index.html">Home</a>
-                    <a style="color: red;" class="p-2" href="index.html">About</a>
-                    <a style="color: red;" class="p-2" href="index.html">Events</a>
-                    <a style="color: red;" class="p-2" href="index.html">Gallery</a>
-                    <a style="color: red;" class="p-2" href="links.html">Links</a>
-                    <a style="color: red;" class="p-2" href="calendar.html">Calendar</a>
-                    <a style="color: red;" class="p-2" href="outreach.html">Outreach</a>
-                    <a style="color: red;" class="p-2" href="code.html">Code</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="index.html">Home</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="index.html">About</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="index.html">Events</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="index.html">Gallery</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="links.html">Links</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="calendar.html">Calendar</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="outreach.html">Outreach</a>
+                    <a style="color: lightsteelblue;" class="p-2" href="code.html">Code</a>
                 </nav>
             </div>
         </header>
+
+        <div class="text-light container" style="padding-top: 25%;" id ="home">
+            <h3>
+                General Links
+            </h3>
+            <div style="padding-left: 5%" class = "text-light">
+                <ul>
+                    <li><a href = "http://www.astro.umd.edu/">University of Maryland Astronomy Department</a></li>
+                    <li><a href = "http://on.fb.me/astroterpsfacebook">AstroTerps Facebook Page</a></li>
+                    <li><a href = "http://www.astro.umd.edu/openhouse">UM Observatory</a></li>
+                    <li><a href = "http://janus.astro.umd.edu/">The Astronomy Workshop</a></li>
+                    <li><a href = "http://antwrp.gsfc.nasa.gov/apod">Astronomy Picture of the Day</a></li>
+                    <li><a href = "http://saturn.jpl.nasa.gov/">The Cassini Equinox Mission</a></li>
+                    <li><a href = "http://marsrovers.jpl.nasa.gov/home/index.html">NASA Mars Program Site</a></li>
+                    <li><a href = "http://www.nineplanets.org/">Nine Planets</a></li>
+                    <li><a href = "http://burro.cwru.edu/JavaLab/GalCrashWeb/">Galaxy Crash Simulator</a></li>
+                </ul>
+            </div>
+
+            <h3>
+                Upcoming Events
+            </h3>
+            <div style = "padding-left:5%; padding-bottom:15%;" class = "text-light">
+                <ul>
+                    <li><a href = "http://www.astro.umd.edu/events/colloquia/upcoming.html">Upcoming UMD Astronomy Events</a></li>
+                    <li><a href = "http://asd.gsfc.nasa.gov/Marc.Kuchner/exoplanetclub.html">NASA Goddard Extrasolar Planets Seminar</a></li>
+                    <li><a href = "http://scicolloq.gsfc.nasa.gov/">Goddard Scientific Colloquium</a></li>
+                    <li><a href = "http://science.gsfc.nasa.gov/690/planetary_seminar.html">NASA GSFC Planetary Science and Astrobiology Seminar Series</a></li>
+                    <li><a href = "http://www.greenbeltastro.org/">The Astronomical Society of Greenbelt</a></li>
+                    <li><a href = "http://hubblesite.org/about_us/public_talks/">HubbleSite Public Talks</a></li>
+                    <li><a href = "http://md.spacegrant.org/index.php?page=maryland-space-grant-observatory">Maryland Space Grant Observatory</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div id = "footer" class="text-center">
+                <h5 style = "padding-top:9px; font-size:100%; color:lightsteelblue;">
+                    <a style = "color:lightsteelblue" 
+                    href="https://maps.umd.edu/map/index.html?&zoom=19&feature=building&name=224&basemap=detailed&hideiframe=true" target = "_blank">
+                        CSS1255</a> 
+                    | 
+                    <a style = " color:lightsteelblue;" href="">Contact Us</a>
+                    | 
+                    <a style = " color:lightsteelblue;" href="#home" onclick="smoothScroll('home');return false;">Back to Top</a>
+                </h5>
+            </div>
+        </footer>
+
     </body>
 </html>
