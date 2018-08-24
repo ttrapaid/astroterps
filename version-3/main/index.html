@@ -7,9 +7,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+        <style>
+            canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+
+            .container {
+                position: relative;
+                z-index: 1;
+                height: 70px;
+            }
+        </style>
     </head>
 
-    <body class="is-preload">
+    <canvas id="bgCanvas"></canvas>
+    <script src="../../version-2/starScript.js"></script>
+
+    <body class="is-preload" style="background-color:rgb(10,10,5);">
         <section id="sidebar">
             <div class="inner">
                 <nav>
@@ -27,16 +45,14 @@
             </div>
         </section>
 
-        <div id="wrapper">
-            <section id="intro" class="wrapper style1 fullscreen fade-up">
-                <div class="inner">
-                    <h1>AstroTerps</h1>
-                    <p>
-                        Terrapin Astronimcal Society
-                    </p>
-                </div>
-            </section>
-        </div>
+        <section id="intro" class="wrapper fade-up" style="padding-left:20%; padding-top:15%;">
+            <div class="inner">
+                <h1>AstroTerps</h1>
+                <p>
+                    Terrapin Astronimcal Society
+                </p>
+            </div>
+        </section>
 
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -45,5 +61,5 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-    </body>
+    </body> 
 </html>
