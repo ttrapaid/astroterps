@@ -26,8 +26,9 @@
 
     <canvas id="bgCanvas"></canvas>
     <script src="../../version-2/starScript.js"></script>
+   
 
-    <body class="is-preload" style="background-color:rgb(10,10,5);">
+    <body onload = "startTime()" class="is-preload" style="background-color:rgb(10,10,5);">
         <section id="sidebar">
             <div class="inner">
                 <nav>
@@ -42,9 +43,9 @@
             </div>
         </section>
 
-        <section id="intro" class="wrapper fade-up" style="padding-left:20%; padding-top:17%;">
+        <section id="intro" class="wrapper fade-up" style="padding-left:20%;">
             <div id ="home" class="inner">
-                <h1>AstroTerps</h1>
+                <h1 style="padding-top:25%;">AstroTerps</h1>
                 <p>
                     Terrapin Astronimcal Society
                 </p>
@@ -117,8 +118,8 @@
             </div>
 
            <div id ="calendar" class="inner" style="padding-bottom:15%;">
-               <h2 style="color: rgb(224,58,62);">Calendar</h1>
-                I need to figure out how to implement a calendar here
+                <h2 style="color: rgb(224,58,62);">Calendar</h1>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
            </div>
 
            <div id ="outreach" class="inner" style="padding-bottom:15%;">
@@ -134,8 +135,10 @@
                 <br>
 
                 Check out our <a href = "http://nightsky.jpl.nasa.gov/club-view.cfm?Club_ID=1380">NSN page</a>!
+                
 
-                <div style = "padding-left:5%; padding-top:5%;">
+                <div style = "padding-left:5%;">
+                    <br>
                     <h4 style="color:rgb(255,213,32);">Upcoming NSN Events</h4>
                     <ul style = "padding-left: 5%;">
                         <li>Date/Time - Name/Link</li>
